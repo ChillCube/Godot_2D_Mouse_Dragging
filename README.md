@@ -2,7 +2,7 @@
 An addon for dragging objects with the mouse in godot 2D
 
 ## Installation
-To add this to your project, use the following commands:
+To add this to your project, use the following commands inside the root of your godot project:
 ```bash
 git init && \
 git submodule add --recursive https://github.com/ChillCube/Godot_2D_Mouse_Dragging.git addons/2DMouseDragging && \

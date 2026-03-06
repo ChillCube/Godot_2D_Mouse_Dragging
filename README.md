@@ -32,15 +32,17 @@ If you've made changes to the submodule and want to push these changes to the pr
 ```bash
 echo "Enter your commit message:" && \
 read COMMIT_MSG && \
-cd addons/MouseDragging2D && \
+ROOT_DIR=$(git rev-parse --show-toplevel) && \
+SUB_PATH="addons/MouseDragging2D" && \
+cd "$ROOT_DIR/$SUB_PATH" && \
 git checkout main && \
 git pull origin main --rebase && \
 git add . && \
 git commit -m "$COMMIT_MSG" && \
 git push origin main && \
-cd ../.. && \
+cd "$ROOT_DIR" && \
 git pull origin main --rebase && \
-git add addons/MouseDragging2D && \
+git add "$SUB_PATH" && \
 git commit -m "Ref(submodule): $COMMIT_MSG" && \
 git push origin main
 ```

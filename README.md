@@ -7,7 +7,7 @@ The movement will then be handled by the SmoothMovement node.
 To add this to your project, use the following commands:
 ```bash
 git init && \
-git submodule add https://github.com/ChillCube/Godot_SmoothMovement.git addons/MouseDragging2D && \
+git submodule add https://github.com/ChillCube/Godot_2D_Mouse_Dragging.git addons/MouseDragging2D && \
 git submodule update --init --recursive --remote
 ```
 
@@ -15,15 +15,15 @@ git submodule update --init --recursive --remote
 > If you use submodules in your project, and don't want these to update to the latest version, run this instead:
 > ```bash
 > git init && \
-> git submodule add https://github.com/ChillCube/Godot_SmoothMovement.git addons/MouseDragging2D && \
-> git submodule update --init --recursive --remote addons/SmoothMovement
+> git submodule add https://github.com/ChillCube/Godot_2D_Mouse_Dragging.git addons/MouseDragging2D && \
+> git submodule update --init --recursive --remote addons/MouseDragging2D
 > ```
 
 ## Deinstallation
 ### Linux
 Run this in the root of your godot project:
 ```bash
-git rm -f addons/SmoothMovement && \
+git rm -f addons/MouseDragging2D && \
 rm -rf .git/modules/addons/MouseDragging2D && \
 rmdir addons 2>/dev/null
 ```

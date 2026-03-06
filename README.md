@@ -1,11 +1,13 @@
-# Godot_2D_Mouse_Dragging
-An addon for dragging objects with the mouse in godot 2D
+# Godot Smooth Movement
+
+This project adds a new node called "SmoothMovement", which is attached to the node you want to move. 
+The movement will then be handled by the SmoothMovement node. 
 
 ## Installation
-To add this to your project, use the following commands inside the root of your godot project:
+To add this to your project, use the following commands:
 ```bash
 git init && \
-git submodule add --recursive https://github.com/ChillCube/Godot_2D_Mouse_Dragging.git addons/2DMouseDragging && \
+git submodule add https://github.com/ChillCube/Godot_SmoothMovement.git addons/MouseDragging2D && \
 git submodule update --init --recursive --remote
 ```
 
@@ -13,6 +15,15 @@ git submodule update --init --recursive --remote
 > If you use submodules in your project, and don't want these to update to the latest version, run this instead:
 > ```bash
 > git init && \
-> git submodule add --recursive https://github.com/ChillCube/Godot_2D_Mouse_Dragging.git addons/2DMouseDragging && \
-> git submodule update --init --recursive --remote addons/2DMouseDragging
+> git submodule add https://github.com/ChillCube/Godot_SmoothMovement.git addons/MouseDragging2D && \
+> git submodule update --init --recursive --remote addons/SmoothMovement
 > ```
+
+## Deinstallation
+### Linux
+Run this in the root of your godot project:
+```bash
+git rm -f addons/SmoothMovement && \
+rm -rf .git/modules/addons/MouseDragging2D && \
+rmdir addons 2>/dev/null
+```

@@ -1,7 +1,6 @@
-# Godot Smooth Movement
+# Godot 2D Mouse Dragging
 
-This project adds a new node called "SmoothMovement", which is attached to the node you want to move. 
-The movement will then be handled by the SmoothMovement node. 
+This project is used for adding the ability to drag 2D nodes with the mouse. 
 
 ## Installation
 To add this to your project, use the following commands:

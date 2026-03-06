@@ -15,4 +15,5 @@ git submodule update --init --recursive --remote
 > ```bash
 > git init && \
 > git submodule add --recursive https://github.com/ChillCube/Godot_2D_Mouse_Dragging.git addons/2DMouseDragging && \
-> git submodule update --init --recursive --remote addons/2DMouseDragging```
+> git submodule update --init --recursive --remote addons/2DMouseDragging
+> ```

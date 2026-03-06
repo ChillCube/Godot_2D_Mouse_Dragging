@@ -34,10 +34,12 @@ echo "Enter your commit message:" && \
 read COMMIT_MSG && \
 cd addons/MouseDragging2D && \
 git checkout main && \
+git pull origin main --rebase && \
 git add . && \
 git commit -m "$COMMIT_MSG" && \
 git push origin main && \
 cd ../.. && \
+git pull origin main --rebase && \
 git add addons/MouseDragging2D && \
 git commit -m "Ref(submodule): $COMMIT_MSG" && \
 git push origin main

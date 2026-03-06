@@ -46,3 +46,5 @@ git add "$SUB_PATH" && \
 git commit -m "Ref(submodule): $COMMIT_MSG" && \
 git push origin main
 ```
+
+It will prompt you to enter the name of the commmit. Enter the name after copy pasting it.

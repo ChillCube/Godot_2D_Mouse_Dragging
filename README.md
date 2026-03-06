@@ -26,3 +26,19 @@ git rm -f addons/MouseDragging2D && \
 rm -rf .git/modules/addons/MouseDragging2D && \
 rmdir addons 2>/dev/null
 ```
+## For Developers
+### Push Changes
+If you've made changes to the submodule and want to push these changes to the project, copy paste this into the terminal at the root of the directory:
+```bash
+echo "Enter your commit message:" && \
+read COMMIT_MSG && \
+cd addons/MouseDragging2D && \
+git checkout main && \
+git add . && \
+git commit -m "$COMMIT_MSG" && \
+git push origin main && \
+cd ../.. && \
+git add addons/MouseDragging2D && \
+git commit -m "Ref(submodule): $COMMIT_MSG" && \
+git push origin main
+```

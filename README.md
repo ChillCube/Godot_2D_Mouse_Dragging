@@ -17,9 +17,7 @@ clone-gd-addon https://github.com/ChillCube/Godot_2D_Mouse_Dragging.git
 ### Linux
 Run this in the root of your godot project:
 ```bash
-git rm -f addons/MouseDragging2D && \
-rm -rf .git/modules/addons/MouseDragging2D && \
-rmdir addons 2>/dev/null
+remove-gd-addon Godot_2D_Mouse_Dragging.git
 ```
 ## For Developers
 ### Push Changes

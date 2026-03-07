@@ -3,18 +3,15 @@
 This project is used for adding the ability to drag 2D nodes with the mouse. 
 
 ## Installation
+
+Make sure to download the ChillCube Developer tools to use this addon: https://github.com/ChillCube/ChillCube-Developer-Tools.git
+
+### Linux
+
 To add this to your project, use the following commands:
 ```bash
 clone-gd-addon https://github.com/ChillCube/Godot_2D_Mouse_Dragging.git
 ```
-
-> [!WARNING]
-> If you use submodules in your project, and don't want these to update to the latest version, run this instead:
-> ```bash
-> git init && \
-> git submodule add https://github.com/ChillCube/Godot_2D_Mouse_Dragging.git addons/MouseDragging2D && \
-> git submodule update --init --recursive --remote addons/MouseDragging2D
-> ```
 
 ## Deinstallation
 ### Linux

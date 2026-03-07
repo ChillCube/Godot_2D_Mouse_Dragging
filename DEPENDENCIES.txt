@@ -1,1 +1,2 @@
-https://github.com/ChillCube/Godot_SmoothMovement.git # required for movement of the object
+# required for movement of the object
+https://github.com/ChillCube/Godot_SmoothMovement.git

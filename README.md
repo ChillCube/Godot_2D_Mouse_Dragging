@@ -12,6 +12,8 @@ To add this to your project, use the following commands:
 ```bash
 clone-gd-addon https://github.com/ChillCube/Godot_2D_Mouse_Dragging.git
 ```
+> [!IMPORTANT]
+> Make sure to enable the addon and its dependenncies in the project settings!
 
 ## Deinstallation
 ### Linux

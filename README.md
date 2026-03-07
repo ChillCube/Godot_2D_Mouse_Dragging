@@ -21,22 +21,9 @@ remove-gd-addon Godot_2D_Mouse_Dragging.git
 ```
 ## For Developers
 ### Push Changes
-If you've made changes to the submodule and want to push these changes to the project, copy paste this into the terminal at the root of the directory:
+Run this at the root of your direcotry to push changes you've made to the addons in the project:
 ```bash
-echo "Enter your commit message:"; \
-read COMMIT_MSG; \
-set ROOT_DIR (git rev-parse --show-toplevel); \
-set SUB_PATH "addons/MouseDragging2D"; \
-cd "$ROOT_DIR/$SUB_PATH"; and \
-git checkout main; and \
-git pull origin main --rebase; and \
-git add .; and \
-git commit -m "$COMMIT_MSG" --allow-empty; and \
-git push origin main; and \
-cd "$ROOT_DIR"; and \
-git add "$SUB_PATH"; and \
-git commit -m "Ref(submodule): $COMMIT_MSG" --allow-empty; and \
-git push origin (git branch --show-current)
+push-all-addons
 ```
 
 It will prompt you to enter the name of the commmit. Enter the name after copy pasting it.

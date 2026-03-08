@@ -1,5 +1,5 @@
 # Godot_2D_Mouse_Dragging API Reference
-Generated on: Sun Mar  8 03:37:03 AM CET 2026
+Generated on: Sun Mar  8 03:39:17 AM CET 2026
 
 ---
 
@@ -7,6 +7,9 @@ Generated on: Sun Mar  8 03:37:03 AM CET 2026
 
 Use this node to make any object in the game draggeable, by simply adding it to the object you want to drag around. The object that will be dragged around will be the parent of the node. You can disable rotation in the "Settings", as well as set a custom cursor using a node.
 
+   
+
+## Signals
 ### object_placed()
 **Event:** Signal
 
@@ -17,6 +20,7 @@ is used to communicate to other nodes that the object was put down after it was 
 
 is used to communicate to other nodes that the object was picked up by the mouse
 
+## Properties
 ### mouse_area
 **Type:** Area2D
 

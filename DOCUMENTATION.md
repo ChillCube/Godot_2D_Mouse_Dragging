@@ -1,15 +1,11 @@
 # Godot_2D_Mouse_Dragging API Reference
-Generated on: Sun Mar  8 03:35:20 AM CET 2026
+Generated on: Sun Mar  8 03:37:03 AM CET 2026
 
 ---
 
 ## DragWithMouse
 
-**Inherits:** 
-
 Use this node to make any object in the game draggeable, by simply adding it to the object you want to drag around. The object that will be dragged around will be the parent of the node. You can disable rotation in the "Settings", as well as set a custom cursor using a node.
-
-Property Index
 
 ### object_placed()
 **Event:** Signal
@@ -44,11 +40,15 @@ Parent node that determines the position of the object being dragged (can be the
 
 To define the cursor position if the game uses a custom cursor (for example for controller support). Will default to the mouse position if nothing is defined. The cursor must have a "pressing_L" (boolean) variable, which is true if the left mouse button is pressed, for this to work.
 
-bool on = true
+### on
+**Type:** bool
+**Default:** true
 
 To turn this node on and off
 
-bool smooth_movement = true
+### smooth_movement
+**Type:** bool
+**Default:** true
 
 Turn this on if you want smooth movement (requires the smooth movement addon)
 

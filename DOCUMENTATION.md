@@ -1,68 +1,60 @@
 # Godot_2D_Mouse_Dragging API Reference
-Generated on: Sun Mar  8 03:08:02 AM CET 2026
+Generated on: Sun Mar  8 03:12:56 AM CET 2026
 
-
----
-
-
-
+.. _DragWithMouse:
 DragWithMouse
-
 **Inherits:** 
-
 Use this node to make any object in the game draggeable, by simply adding it to the object you want to drag around. The object that will be dragged around will be the parent of the node. You can disable rotation in the "Settings", as well as set a custom cursor using a node.
-
-
-
-
-
+Property Index
+.. list-table::
+   :header-rows: 1
+   * - Type
+     - Name
+     - Default value
+   * - `Area2D`
+     - `mouse_area`
+     - ````
+   * - `String`
+     - `mouse_left_input`
+     - ``"mb_left"``
+   * - `Node2D`
+     - `parent_node`
+     - ``get_parent()``
+   * - `Node2D`
+     - `cursor`
+     - ``null``
+   * - `bool`
+     - `on`
+     - ``true``
+   * - `bool`
+     - `smooth_movement`
+     - ``true``
+Signal Descriptions
+.. _DragWithMouse_object_placed:
 object_placed()
-
 is used to communicate to other nodes that the object was put down after it was grabbed
-
-
-
+.. _DragWithMouse_object_picked_up:
 object_picked_up()
-
 is used to communicate to other nodes that the object was picked up by the mouse
+Property Descriptions
+.. _DragWithMouse_mouse_area:
+### mouse_area
+**Type:** `Area2D`
 
-
-
-
-
-
-### `Area2D` mouse_area
 
 Area that defines where the mouse can drag the object
 
 
 
-### `String` mouse_left_input = ``"mb_left"``
+.. _DragWithMouse_mouse_left_input:
+
 
 Define what input event is used in the game for clicking
-
-
-
-### `Node2D` parent_node = ``get_parent()``
-
+.. _DragWithMouse_parent_node:
 Parent node that determines the position of the object being dragged (can be the same as sprite). Will assume it to be the nodes parent if nothing is put in here.
-
-
-
-### `Node2D` cursor = ``null``
-
+.. _DragWithMouse_cursor:
 To define the cursor position if the game uses a custom cursor (for example for controller support). Will default to the mouse position if nothing is defined. The cursor must have a "pressing_L" (boolean) variable, which is true if the left mouse button is pressed, for this to work.
-
-
-
-### `bool` on = ``true``
-
+.. _DragWithMouse_on:
 To turn this node on and off
-
-
-
-### `bool` smooth_movement = ``true``
-
+.. _DragWithMouse_smooth_movement:
 Turn this on if you want smooth movement (requires the smooth movement addon)
-
-

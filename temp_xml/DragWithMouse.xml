@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="DragWithMouse" inherits="Node" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		Use this node to make any object in the game draggeable, by simply adding it to the object you want to drag around. The object that will be dragged around will be the parent of the node. You can disable rotation in the "Settings", as well as set a custom cursor using a node.
+	</brief_description>
+	<description>
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="_ready">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_process">
+			<return type="void" />
+			<param index="0" name="delta" type="float" />
+			<description>
+			</description>
+		</method>
+		<method name="_unhandled_input">
+			<return type="void" />
+			<param index="0" name="event" type="InputEvent" />
+			<description>
+			</description>
+		</method>
+		<method name="_mouse_entered">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_mouse_exited">
+			<return type="void" />
+			<description>
+			</description>
+		</method>
+		<method name="_body_entered">
+			<return type="void" />
+			<param index="0" name="body" type="Variant" />
+			<description>
+			</description>
+		</method>
+		<method name="_body_exited">
+			<return type="void" />
+			<param index="0" name="body" type="Variant" />
+			<description>
+			</description>
+		</method>
+	</methods>
+	<members>
+		<member name="mouse_area" type="Area2D" setter="" getter="">
+			Area that defines where the mouse can drag the object
+		</member>
+		<member name="mouse_left_input" type="String" setter="" getter="" default="&quot;mb_left&quot;">
+			Define what input event is used in the game for clicking
+		</member>
+		<member name="parent_node" type="Node2D" setter="" getter="" default="get_parent()">
+			Parent node that determines the position of the object being dragged (can be the same as sprite). Will assume it to be the nodes parent if nothing is put in here.
+		</member>
+		<member name="cursor" type="Node2D" setter="" getter="" default="null">
+			To define the cursor position if the game uses a custom cursor (for example for controller support). Will default to the mouse position if nothing is defined. The cursor must have a "pressing_L" (boolean) variable, which is true if the left mouse button is pressed, for this to work.
+		</member>
+		<member name="on" type="bool" setter="" getter="" default="true">
+			To turn this node on and off
+		</member>
+		<member name="smooth_movement" type="bool" setter="" getter="" default="true">
+			Turn this on if you want smooth movement (requires the smooth movement addon)
+		</member>
+		<member name="mouse_touching" type="bool" setter="" getter="" default="false">
+		</member>
+		<member name="mouse_just_grabbed" type="bool" setter="" getter="" default="false">
+		</member>
+		<member name="mouse_pressing" type="bool" setter="" getter="" default="false">
+		</member>
+		<member name="moving" type="bool" setter="" getter="" default="false">
+		</member>
+		<member name="target_position" type="Vector2" setter="" getter="">
+		</member>
+		<member name="rotation_target" type="float" setter="" getter="">
+		</member>
+	</members>
+	<signals>
+		<signal name="object_placed">
+			<description>
+				is used to communicate to other nodes that the object was put down after it was grabbed
+			</description>
+		</signal>
+		<signal name="object_picked_up">
+			<description>
+				is used to communicate to other nodes that the object was picked up by the mouse
+			</description>
+		</signal>
+	</signals>
+</class>

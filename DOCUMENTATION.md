@@ -1,93 +1,87 @@
 # Godot_2D_Mouse_Dragging API Reference
-Generated on: Sun Mar  8 03:16:13 AM CET 2026
+Generated on: Sun Mar  8 03:18:12 AM CET 2026
+
+## Description
+DragWithMouse
+
+**Inherits:** 
+
+Use this node to make any object in the game draggeable, by simply adding it to the object you want to drag around. The object that will be dragged around will be the parent of the node. You can disable rotation in the "Settings", as well as set a custom cursor using a node.
+
+     - Name
+
+     - Default value
+
+     - `1`
+
+     - ````
+
+     - `1`
+
+     - ``"mb_left"``
+
+     - `1`
+
+     - ``get_parent()``
+
+     - `1`
+
+     - ``null``
+
+     - `1`
+
+     - ``true``
+
+     - `1`
+
+     - ``true``
+
+
+---
 
 ### object_placed()
-**Event: Signal**
+**Event:** Signal
 
 is used to communicate to other nodes that the object was put down after it was grabbed
 
-.. _DragWithMouse_object_picked_up:
-
 ### object_picked_up()
-**Event: Signal**
+**Event:** Signal
 
 is used to communicate to other nodes that the object was picked up by the mouse
 
-.. _DragWithMouse_mouse_area:
-
 ### mouse_area
-**Type:** Area2D
+**Type:** 1
 
 Area that defines where the mouse can drag the object
 
-.. _DragWithMouse_mouse_left_input:
-
 ### mouse_left_input
-**Type:** String
+**Type:** 1
 **Default:** `"mb_left"`
 
 Define what input event is used in the game for clicking
 
-.. _DragWithMouse_parent_node:
-
 ### parent_node
-**Type:** Node2D
+**Type:** 1
 **Default:** `get_parent()`
 
 Parent node that determines the position of the object being dragged (can be the same as sprite). Will assume it to be the nodes parent if nothing is put in here.
 
-.. _DragWithMouse_cursor:
-
 ### cursor
-**Type:** Node2D
+**Type:** 1
 **Default:** `null`
 
 To define the cursor position if the game uses a custom cursor (for example for controller support). Will default to the mouse position if nothing is defined. The cursor must have a "pressing_L" (boolean) variable, which is true if the left mouse button is pressed, for this to work.
 
-.. _DragWithMouse_on:
-
 ### on
-**Type:** bool
+**Type:** 1
 **Default:** `true`
 
 To turn this node on and off
 
-.. _DragWithMouse_smooth_movement:
-
 ### smooth_movement
-**Type:** bool
+**Type:** 1
 **Default:** `true`
 
 Turn this on if you want smooth movement (requires the smooth movement addon)
 
-## Description
-.. _DragWithMouse:
-DragWithMouse
-**Inherits:** 
-Use this node to make any object in the game draggeable, by simply adding it to the object you want to drag around. The object that will be dragged around will be the parent of the node. You can disable rotation in the "Settings", as well as set a custom cursor using a node.
-.. list-table::
-   :header-rows: 1
-   * - Type
-     - Name
-     - Default value
-   * - `Area2D`
-     - `mouse_area`
-     - ````
-   * - `String`
-     - `mouse_left_input`
-     - ``"mb_left"``
-   * - `Node2D`
-     - `parent_node`
-     - ``get_parent()``
-   * - `Node2D`
-     - `cursor`
-     - ``null``
-   * - `bool`
-     - `on`
-     - ``true``
-   * - `bool`
-     - `smooth_movement`
-     - ``true``
-
----
 

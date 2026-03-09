@@ -1,6 +1,4 @@
-## Use this node to make any object in the game draggeable, by simply adding it to the object you want to drag around.
-## The object that will be dragged around will be the parent of the node. 
-## You can disable rotation in the "Settings", as well as set a custom cursor using a node.
+## Use this node to make any object in the game draggeable, by simply adding it to the object you want to drag around. The object that will be dragged around will be the parent of the node. You can disable rotation in the "Settings", as well as set a custom cursor using a node.
 extends Node
 class_name DragWithMouse
 
@@ -8,25 +6,16 @@ class_name DragWithMouse
 
 @export_group("REQUIRED SETTINGS")
 
-## Area that defines where the mouse can drag the object
-@export var mouse_area : Area2D
-
-## Define what input event is used in the game for clicking
-@export var mouse_left_input : String = "mb_left"
-
-## Parent node that determines the position of the object being dragged (can be the same as sprite). Will assume it to be the nodes parent if nothing is put in here.
-@export var parent_node : Node2D = get_parent();
+@export var mouse_area : Area2D ## Area that defines where the mouse can drag the object
+@export var mouse_left_input : String = "mb_left" ## Define what input event is used in the game for clicking
+@export var parent_node : Node2D = get_parent(); ## Parent node that determines the position of the object being dragged (can be the same as sprite). Will assume it to be the nodes parent if nothing is put in here.
 
 @export_group("Settings")
-## To define the cursor position if the game uses a custom cursor (for example for controller support). Will default to the mouse position if nothing is defined. The cursor must have a "pressing_L" (boolean) variable, which is true if the left mouse button is pressed, for this to work.
-@export var cursor : Node2D = null
-
-## To turn this node on and off
-@export var on : bool = true;
+@export var cursor : Node2D = null ## To define the cursor position if the game uses a custom cursor (for example for controller support). Will default to the mouse position if nothing is defined. The cursor must have a "pressing_L" (boolean) variable, which is true if the left mouse button is pressed, for this to work.
+@export var on : bool = true; ## To turn this node on and off
 
 @export_group("Smooth Movement")
-## Turn this on if you want smooth movement (requires the smooth movement addon)
-@export var smooth_movement : bool = true;
+@export var smooth_movement : bool = true; ## Turn this on if you want smooth movement (requires the smooth movement addon)
 
 #endregion
 
@@ -38,11 +27,9 @@ var moving : bool = false;
 var target_position : Vector2
 var rotation_target : float;
 
-## is used to communicate to other nodes that the object was put down after it was grabbed
-signal object_placed
+signal object_placed ## is used to communicate to other nodes that the object was put down after it was grabbed
 
-## is used to communicate to other nodes that the object was picked up by the mouse
-signal object_picked_up
+signal object_picked_up ## is used to communicate to other nodes that the object was picked up by the mouse
 
 func _ready() -> void:
 	target_position = get_parent().global_position;

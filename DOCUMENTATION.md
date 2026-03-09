@@ -1,7 +1,7 @@
 # Godot_2D_Mouse_Dragging API Reference
-Generated on: Mon Mar  9 01:22:30 PM CET 2026
+Generated on: 2026-03-09
 
-Godot Addon
+Use this node to make any object in the game draggeable, by simply adding it to the object you want to drag around. The object that will be dragged around will be the parent of the node. You can disable rotation in the "Settings", as well as set a custom cursor using a node.
 
 ---
 

@@ -18,10 +18,4 @@ Use this node to make any object in the game draggeable, by simply adding it to 
 | **on** | `bool` | `true` | To turn this node on and off |
 | **smooth_movement** | `bool` | `true` | Turn this on if you want smooth movement (requires the smooth movement addon) |
 
-### Signals
-| Signal | Description |
-| :--- | :--- |
-| **object_placed** | is used to communicate to other nodes that the object was put down after it was grabbed |
-| **object_picked_up** | is used to communicate to other nodes that the object was picked up by the mouse |
-
 ---

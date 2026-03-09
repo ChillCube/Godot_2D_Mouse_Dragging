@@ -1,7 +1,7 @@
 # Godot_2D_Mouse_Dragging API Reference
-Generated on: Mon Mar  9 01:56:11 AM CET 2026
+Generated on: Mon Mar  9 01:22:30 PM CET 2026
 
-A Godot Addon
+Godot Addon
 
 ---
 

@@ -1,6 +1,6 @@
 # Godot_2D_Mouse_Dragging
 
-A Godot Addon
+Godot Addon
 
 ## Installation
 

@@ -6,6 +6,8 @@ Godot Addon
 ---
 
 ## Class: DragWithMouse
+**Inherits:** `Node`
+
 Use this node to make any object in the game draggeable, by simply adding it to the object you want to drag around. The object that will be dragged around will be the parent of the node. You can disable rotation in the "Settings", as well as set a custom cursor using a node.
 
 ### Properties

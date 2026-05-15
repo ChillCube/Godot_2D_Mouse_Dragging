@@ -1,6 +1,6 @@
 # Godot_2D_Mouse_Dragging
 
-Godot Addon
+A godot addon that makes any object draggable with the mouse by adding it as a child node
 
 ## Installation
 
@@ -11,8 +11,6 @@ To add this to your project, copy paste these commands into terminal at the root
 ```bash
 clone-gd-addon https://github.com/ChillCube/Godot_2D_Mouse_Dragging.git
 ```
-> [!IMPORTANT]
-> Make sure to enable the addon, including its dependencies in the project settings!
 
 ## Documentation
 You can find the documentation at: https://github.com/ChillCube/Godot_2D_Mouse_Dragging/blob/main/DOCUMENTATION.md
@@ -32,3 +30,9 @@ push-all-addons
 ```
 
 
+
+## Used By
+2 other ChillCube addon(s) depend on this:
+
+- [2dCard](https://github.com/ChillCube/2dCard)
+- [PlacementArea2D](https://github.com/ChillCube/PlacementArea2D)

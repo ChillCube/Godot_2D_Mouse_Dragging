@@ -28,11 +28,21 @@ var target_position : Vector2
 var rotation_target : float;
 
 signal object_placed ## is used to communicate to other nodes that the object was put down after it was grabbed
-
 signal object_picked_up ## is used to communicate to other nodes that the object was picked up by the mouse
+
+static func initialize(user : Node, _mouse_area : Area2D, _mouse_left_input : String) -> DragWithMouse:
+	var new_dragger = DragWithMouse.new()
+	new_dragger.mouse_area = _mouse_area
+	new_dragger.mouse_left_input = _mouse_left_input
+	new_dragger.parent_node = user as Node2D
+	user.add_child(new_dragger)
+	return new_dragger
 
 func _ready() -> void:
 	target_position = get_parent().global_position;
+	if not mouse_area:
+		push_error("DragWithMouse: 'mouse_area' is not assigned. Assign an Area2D in the inspector.")
+		return
 	mouse_area.connect("mouse_entered", _mouse_entered)
 	mouse_area.connect("mouse_exited", _mouse_exited)
 	mouse_area.connect("body_entered", _body_entered)
@@ -42,38 +52,37 @@ func _process(delta: float) -> void:
 	if on and (mouse_just_grabbed or moving):
 		if cursor != null: #if the cursor is a node
 			if cursor.pressing_L and mouse_touching:
+				if not moving:
+					emit_signal("object_picked_up")
 				moving = true;
-				emit_signal("object_picked_up")
 			if not cursor.pressing_L:
+				if moving:
+					emit_signal("object_placed")
 				moving = false;
-				emit_signal("object_placed")
 			if moving:
 				target_position = cursor.global_position
 		else: # if no cursor is defined
 			if mouse_pressing and mouse_touching:
+				if not moving:
+					emit_signal("object_picked_up")
 				moving = true;
-				emit_signal("object_picked_up")
 			if not mouse_pressing:
+				if moving:
+					emit_signal("object_placed")
 				moving = false;
-				emit_signal("object_placed")
 			if moving:
 				target_position = get_viewport().get_mouse_position()
-	
-		var change : Vector2 = (target_position - parent_node.global_position) * delta
 		if smooth_movement and parent_node.has_node("SmoothMovement"):
 			var smooth_mover : Node = parent_node.get_node("SmoothMovement")
-			smooth_mover.global_target_position = target_position;
-	var change : Vector2 = (target_position - parent_node.global_position) * delta
+			smooth_mover.global_target_position = target_position
 	mouse_just_grabbed = false
-	if smooth_movement and parent_node.has_node("SmoothMovement"):
-		target_position = parent_node.get_node("SmoothMovement").global_target_position;
 
 func _unhandled_input(event: InputEvent) -> void:
-	if event is InputEventMouse:
-		if event.is_action_pressed("mb_left"):
+	if event is InputEventMouseButton and event.button_index == MOUSE_BUTTON_LEFT:
+		if event.pressed:
 			mouse_pressing = true
 			mouse_just_grabbed = true
-	if event.is_action_released("mb_left"):
+		else:
 			mouse_pressing = false
 
 func _mouse_entered() -> void:
@@ -93,4 +102,3 @@ func _body_exited(body) -> void:
 			mouse_touching = false;
 
 #endregion
-

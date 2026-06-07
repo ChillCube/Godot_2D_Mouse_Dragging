@@ -29,8 +29,7 @@ push-all-addons
 ```
 
 ## Used By
-3 other ChillCube addon(s) depend on this:
+2 other ChillCube addon(s) depend on this:
 
 - [2dCard](https://github.com/ChillCube/2dCard)
 - [PlacementArea2D](https://github.com/ChillCube/PlacementArea2D)
-- [PlaceAbleObject2D](https://github.com/ChillCube/PlaceAbleObject2D)

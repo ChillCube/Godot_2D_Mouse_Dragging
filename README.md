@@ -27,9 +27,3 @@ remove-gd-addon Godot_2D_Mouse_Dragging
 ```bash
 push-all-addons
 ```
-
-## Used By
-2 other ChillCube addon(s) depend on this:
-
-- [2dCard](https://github.com/ChillCube/2dCard)
-- [PlacementArea2D](https://github.com/ChillCube/PlacementArea2D)
